@@ -1,0 +1,20 @@
+name: Build
+
+on:
+  push:
+    branches: 
+      - '*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build and test
+        run: |
+          docker build -t myapp .
+          docker run myapp /bin/sh -c "make  && ./test"
+
