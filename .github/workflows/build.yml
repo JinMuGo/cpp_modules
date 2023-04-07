@@ -1,0 +1,17 @@
+name: Build
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build and test
+        run: |
+          docker build -t myapp .
+          docker run myapp /bin/sh -c "make CXXFLAGS=-std=c++98 && ./test"
+
