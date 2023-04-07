@@ -13,5 +13,5 @@ jobs:
       - name: Build and test
         run: |
           docker build -t myapp .
-          docker run myapp /bin/sh -c "make CXXFLAGS=-std=c++98 && ./test"
+          docker run myapp /bin/sh -c "make  && ./test"
 
