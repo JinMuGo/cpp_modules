@@ -7,10 +7,11 @@ repos:
         args:
         - -c
         - |
-            docker build --tag=cpp-compile-check --file=- .
-            docker run --rm -v "$(pwd)":/src cpp-compile-check /bin/bash -c "cd /src && make"
+            docker build --tag=cpp-compile-check --file=Dockerfile .
+            docker run --rm --mount type=bind,source="$(pwd)",target=/app cpp-compile-check /bin/bash -c "cd /app && make"
         language: system
         pass_filenames: false
         verbose: true
         files: \.(cpp|hpp|h)$
+
 
