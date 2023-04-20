@@ -6,7 +6,7 @@
 #    By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/07 19:34:14 by jgo               #+#    #+#              #
-#    Updated: 2023/04/07 19:41:21 by jgo              ###   ########.fr        #
+#    Updated: 2023/04/20 17:21:11 by jgo              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ endif
 include ../make_config/Rules.mk
 include ../make_config/Color_rules.mk
 
-SRCS = test.cpp
+SRCS = megaphone.cpp
 
 NAME = megaphone
 

@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.cpp                                           :+:      :+:    :+:   */
+/*   megaphone.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/07 20:31:42 by jgo               #+#    #+#             */
-/*   Updated: 2023/04/07 20:31:42 by jgo              ###   ########.fr       */
+/*   Created: 2023/04/20 17:21:18 by jgo               #+#    #+#             */
+/*   Updated: 2023/04/20 17:57:52 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <string>
 
-using namespace std;
+#define MEGAPHONE_NOISE "* LOUD AND UNBEARABLE FEEDBACK NOISE *"
 
-int main()
-{
-    string name;
-    int age;
-
-    cout << "Enter your name: ";
-    cin >> name;
-
-    cout << "Enter your age: ";
-    cin >> age;
-
-    cout << "Hello, " << name << "! You are " << age << " years old." << endl;
-
-    return 0;
+int main (int ac, char **av)
+{   
+    if (ac == 1)
+        std::cout << MEGAPHONE_NOISE;
+    else
+    {
+        for (int i = 1; av[i]; i++)
+            for (int j = 0; av[i][j]; j++)
+                std::cout << (char)toupper(av[i][j]);
+    }
+    std::cout << std::endl;
+    return (0);
 }
