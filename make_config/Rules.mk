@@ -6,7 +6,7 @@
 #    By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/05 14:02:20 by jgo               #+#    #+#              #
-#    Updated: 2023/04/07 19:48:25 by jgo              ###   ########.fr        #
+#    Updated: 2023/04/20 17:53:54 by jgo              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@
 
 PROJECT_NAME = cpp_modules
 STD = c++98 
-CPPFLAGS = -std=$(STD) -Wall -Wextra -Werro
+CPPFLAGS = -std=$(STD) -Wall -Wextra -Werror -MMD -MP
 
 # verbose
 Q := $(if $(filter 1,$(V) $(VERBOSE)),,@)
