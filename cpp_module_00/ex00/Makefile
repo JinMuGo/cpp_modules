@@ -6,7 +6,7 @@
 #    By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/07 19:34:14 by jgo               #+#    #+#              #
-#    Updated: 2023/04/20 17:21:11 by jgo              ###   ########.fr        #
+#    Updated: 2023/04/20 21:02:35 by jgo              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,8 +14,8 @@ ifndef TOPDIR
 	TOPDIR = $(abspath ../)
 endif
 
-include ../make_config/Rules.mk
-include ../make_config/Color_rules.mk
+include $(TOPDIR)/make_config/Rules.mk
+include $(TOPDIR)/make_config/Color_rules.mk
 
 SRCS = megaphone.cpp
 
