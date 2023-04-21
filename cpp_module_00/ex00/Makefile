@@ -6,7 +6,7 @@
 #    By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/07 19:34:14 by jgo               #+#    #+#              #
-#    Updated: 2023/04/21 10:42:08 by jgo              ###   ########.fr        #
+#    Updated: 2023/04/21 22:14:00 by jgo              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,14 +23,17 @@ DEPS = $(SRCS:.cpp=.d)
 
 all bonus :
 	$(MAKE) $(NAME)
+	$(Q)$(call color_printf,$(GREEN),$(NAME),✨ compiled!)
 
 $(NAME): $(OBJS)
 	$(LINK.cc) $^ -o $@
 	
 clean:
+	$(Q)$(call color_printf,$(YELLOW),$(NAME),🎯 clean object & dependencies)
 	$(RM) $(DEPS) $(OBJS)
 
 fclean: clean
+	$(Q)$(call color_printf,$(RED),$(NAME),🎯 remove $(NAME))
 	$(RM) $(NAME)
 
 re: fclean
