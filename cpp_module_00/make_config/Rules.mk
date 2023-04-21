@@ -6,7 +6,7 @@
 #    By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/05 14:02:20 by jgo               #+#    #+#              #
-#    Updated: 2023/04/20 18:00:53 by jgo              ###   ########.fr        #
+#    Updated: 2023/04/21 17:11:33 by jgo              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,28 +15,28 @@
 
 PROJECT_NAME = cpp_modules
 STD = c++98 
-CPPFLAGS = -std=$(STD) -Wall -Wextra -Werror -MMD -MP
+CXXFLAGS = -std=$(STD) -Wall -Wextra -Werror -MMD -MP
 
 # verbose
 Q := $(if $(filter 1,$(V) $(VERBOSE)),,@)
 
 # debug
 ifdef DEBUG
-	CPPFLAGS = -g3 -MMD -MP
+	CXXFLAGS = -g3 -MMD -MP
 	LDFLAGS += -g3
 endif
 
 # just compile
 ifdef JUST
-	CPPFLAGS = -MMD -MP
+	CXXFLAGS = -MMD -MP
 endif
 
 # address
 ifdef ADDR
-	CPPFLAGS += -fsanitize=address
+	CXXFLAGS += -fsanitize=address
 endif
 
 ifdef RACE
-	CPPFLAGS = -fsanitize=thread -MMD -MP -g3
+	CXXFLAGS = -fsanitize=thread -MMD -MP -g3
 	LDFLAGS += -fsanitize=thread -g3
 endif
