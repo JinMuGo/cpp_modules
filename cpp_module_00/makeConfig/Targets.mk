@@ -1,32 +1,33 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
+#    Targets.mk                                         :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/11/23 14:05:59 by jgo               #+#    #+#              #
-#    Updated: 2023/04/22 11:44:23 by jgo              ###   ########.fr        #
+#    Created: 2023/04/22 10:49:20 by jgo               #+#    #+#              #
+#    Updated: 2023/04/22 11:35:49 by jgo              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-include ./makeConfig/Rules.mk
-include ./makeConfig/Color_rules.mk
-
-PROJECT_NAME = cpp_module_00
-
-DIRS = ex00 ex01
-
 all bonus :
-	$(Q)$(call color_printf,$(YELLOW),$(PROJECT_NAME),🎯 Start compiling)
-	$(Q)$(foreach dir, $(DIRS), $(MAKE) TOPDIR=$(TOPDIR) -C $(dir) $@;)
-	$(Q)$(call color_printf,$(GREEN),$(PROJECT_NAME),✨ compiled!)
+	$(MAKE) $(NAME)
+	$(Q)$(call color_printf,$(GREEN),$(NAME),✨ compiled!)
+
+$(NAME): $(OBJS)
+	$(LINK.cc) $^ -o $@
+	$(MAKE) files=$(NAME) src_dir=`pwd` dst_dir=$(DSTDIR) link_files
 	
-fclean clean:
-	$(Q)$(foreach dir, $(DIRS), $(MAKE) TOPDIR=$(TOPDIR) -C $(dir) $@;)
+clean:
+	$(Q)$(call color_printf,$(YELLOW),$(NAME),🎯 clean object & dependencies)
+	$(RM) $(DEPS) $(OBJS)
+
+fclean: clean
+	$(Q)$(call color_printf,$(RED),$(NAME),🎯 remove $(NAME))
+	$(MAKE) files=$(NAME) src_dir=`pwd` dst_dir=$(DSTDIR) unlink_files
+	$(RM) $(NAME)
 
 re: fclean
-	$(Q)$(foreach dir, $(DIRS), $(MAKE) TOPDIR=$(TOPDIR) -C $(dir) $@;)
 	$(MAKE)
 
 .PHONY: all clean fclean re bonus
