@@ -6,7 +6,7 @@
 /*   By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 19:21:14 by jgo               #+#    #+#             */
-/*   Updated: 2023/04/23 15:54:59 by jgo              ###   ########.fr       */
+/*   Updated: 2023/04/23 18:59:40 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void PhoneBook::searchContact() {
 		else if (input == "")
 			std::cout << "fill out input"
 					  << "\n";
-		if (input.length() > 1 || !isnumber(input[0])) {
+		if (input.length() > 1 || !std::isdigit(input[0])) {
 			std::cout << "Invalid input try again\n";
 			continue;
 		} else if ((input[0] - '0') < 0 || (input[0] - '0') >= idx)
