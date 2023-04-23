@@ -6,7 +6,7 @@
 /*   By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 21:26:25 by jgo               #+#    #+#             */
-/*   Updated: 2023/04/22 09:46:15 by jgo              ###   ########.fr       */
+/*   Updated: 2023/04/23 15:28:56 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,16 @@
 class Contact {
   private:
 	std::string info[5];
-
-	static const std::string infoArr[5];
+	bool		filled;
 
   public:
 	Contact();
 	~Contact();
 	void saveColumn(int info);
 	void saveInfo(int idx);
+	void prtInfos(void);
+	void prtDetailInfos(void);
+	std::string formatStr(std::string str);
+	static const std::string infoArr[5];
+	bool getFilled();
 };

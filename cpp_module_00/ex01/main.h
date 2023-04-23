@@ -6,7 +6,7 @@
 /*   By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 20:43:21 by jgo               #+#    #+#             */
-/*   Updated: 2023/04/22 11:53:30 by jgo              ###   ########.fr       */
+/*   Updated: 2023/04/23 11:10:44 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 #include <iomanip>
 #include <string>
 #include <cstdio>
+
+# define WIDTH 10
 
 enum e_command {
 	EXIT,
@@ -36,6 +38,5 @@ enum e_info {
 
 typedef enum e_command t_command;
 typedef enum e_info t_info;
-
 
 #endif

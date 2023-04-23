@@ -6,7 +6,7 @@
 /*   By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 21:50:05 by jgo               #+#    #+#             */
-/*   Updated: 2023/04/22 11:20:39 by jgo              ###   ########.fr       */
+/*   Updated: 2023/04/23 11:29:02 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int main(void) {
 	std::string input;
 
 	while (command) {
-		std::cout << "> ";
+		std::cout << "[PhoneBook]: ";
 		std::getline(std::cin, input);
 		if (std::cin.eof())
 		{
