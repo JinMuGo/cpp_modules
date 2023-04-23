@@ -6,7 +6,7 @@
 #    By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/23 14:05:59 by jgo               #+#    #+#              #
-#    Updated: 2023/04/22 11:44:23 by jgo              ###   ########.fr        #
+#    Updated: 2023/04/23 16:36:56 by jgo              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ include ./makeConfig/Color_rules.mk
 
 PROJECT_NAME = cpp_module_00
 
-DIRS = ex00 ex01
+DIRS = ex00 ex01 ex02
 
 all bonus :
 	$(Q)$(call color_printf,$(YELLOW),$(PROJECT_NAME),🎯 Start compiling)
