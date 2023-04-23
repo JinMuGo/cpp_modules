@@ -6,7 +6,7 @@
 #    By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/23 14:05:59 by jgo               #+#    #+#              #
-#    Updated: 2023/04/23 16:36:56 by jgo              ###   ########.fr        #
+#    Updated: 2023/04/23 18:50:15 by jgo              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,16 +17,15 @@ PROJECT_NAME = cpp_module_00
 
 DIRS = ex00 ex01 ex02
 
-all bonus :
+$(DIRS):
+	$(MAKE) -C $@
+
+all bonus: 
 	$(Q)$(call color_printf,$(YELLOW),$(PROJECT_NAME),🎯 Start compiling)
-	$(Q)$(foreach dir, $(DIRS), $(MAKE) TOPDIR=$(TOPDIR) -C $(dir) $@;)
+	$(MAKE) $(DIRS)
 	$(Q)$(call color_printf,$(GREEN),$(PROJECT_NAME),✨ compiled!)
 	
-fclean clean:
-	$(Q)$(foreach dir, $(DIRS), $(MAKE) TOPDIR=$(TOPDIR) -C $(dir) $@;)
+fclean clean re:
+	$(Q)$(foreach dir, $(DIRS), $(MAKE) -C $(dir) $@;)
 
-re: fclean
-	$(Q)$(foreach dir, $(DIRS), $(MAKE) TOPDIR=$(TOPDIR) -C $(dir) $@;)
-	$(MAKE)
-
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re bonus $(DIRS)
