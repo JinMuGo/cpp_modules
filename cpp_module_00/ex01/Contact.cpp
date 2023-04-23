@@ -6,7 +6,7 @@
 /*   By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 19:21:13 by jgo               #+#    #+#             */
-/*   Updated: 2023/04/23 15:47:21 by jgo              ###   ########.fr       */
+/*   Updated: 2023/04/23 18:55:37 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,10 @@ void Contact::saveColumn(int _info) {
 }
 
 void Contact::saveInfo(int idx) {
-	this->info[INDEX] = std::to_string(idx);
+	std::stringstream ss;
+	ss << idx;
+
+	this->info[INDEX] = ss.str();
 	for (int i = FIRST_NAME; i <= SECRET; i++)
 		this->saveColumn(i);
 	std::cout << "saveInfo in Contact " << idx << std::endl;

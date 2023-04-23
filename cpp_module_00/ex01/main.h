@@ -6,7 +6,7 @@
 /*   By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 20:43:21 by jgo               #+#    #+#             */
-/*   Updated: 2023/04/23 16:05:56 by jgo              ###   ########.fr       */
+/*   Updated: 2023/04/23 18:55:47 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 #include <iomanip>
 #include <string>
 #include <cstdio>
+#include <sstream>
 
 # define WIDTH 10
 
