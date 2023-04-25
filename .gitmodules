@@ -1,0 +1,4 @@
+[submodule "cpp_module_00"]
+	path = cpp_module_00
+	url = https://github.com/jgo-42/cpp_module_00
+	branch = main
