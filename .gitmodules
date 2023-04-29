@@ -6,3 +6,7 @@
 	path = cpp_module_01
 	url = https://github.com/jgo-42/cpp_module_01
 	branch = main
+[submodule "cpp_module_02"]
+	path = cpp_module_02
+	url = https://github.com/jgo-42/cpp_module_02
+	branch = main
