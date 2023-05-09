@@ -38,6 +38,7 @@ jobs:
                     echo 'Changes detected, proceeding with commit and push...'
                     git config user.name 'jgo-42'
                     git config user.email 'jingmuio@gmail.com'
+                    git pull
                     git commit -am ":arrow_up: Chore: update submodules"
                     git push
                   else
