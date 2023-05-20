@@ -14,3 +14,7 @@
 	path = cpp_module_03
 	url = https://github.com/jgo-42/cpp_module_03
 	branch = main
+[submodule "cpp_module_04"]
+	path = cpp_module_04
+	url = https://github.com/jgodv/cpp_module_04
+	branch = main
