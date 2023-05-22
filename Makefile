@@ -6,14 +6,14 @@
 #    By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/23 14:05:59 by jgo               #+#    #+#              #
-#    Updated: 2023/05/13 18:55:17 by jgo              ###   ########.fr        #
+#    Updated: 2023/05/22 14:57:10 by jgo              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 include ./make_config/Rules.mk
 include ./make_config/Color_rules.mk
 
-DIRS = cpp_module_00 cpp_module_01 cpp_module_02 cpp_module_03
+DIRS = cpp_module_00 cpp_module_01 cpp_module_02 cpp_module_03 cpp_module_04
 
 $(DIRS):
 	$(MAKE) -C $@
