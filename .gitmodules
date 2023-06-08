@@ -18,7 +18,3 @@
 	path = cpp_module_04
 	url = https://github.com/jgodv/cpp_module_04
 	branch = main
-[submodule "make_config"]
-	path = make_config
-	url = https://github.com/jgodv/make_config
-	branch = cpp
