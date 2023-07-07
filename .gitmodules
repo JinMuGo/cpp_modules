@@ -22,3 +22,7 @@
 	path = make_config
 	url = https://github.com/jgodv/make_config
 	branch = cpp
+[submodule "cpp_module_05"]
+	path = cpp_module_05
+	url = https://github.com/devjgo/cpp_module_05
+	branch = main
