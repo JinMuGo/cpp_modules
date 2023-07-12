@@ -26,3 +26,7 @@
 	path = cpp_module_05
 	url = https://github.com/devjgo/cpp_module_05
 	branch = main
+[submodule "cpp_module_06"]
+	path = cpp_module_06
+	url = https://github.com/devjgo/cpp_module_06
+	branch = main
