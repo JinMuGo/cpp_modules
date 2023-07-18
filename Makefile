@@ -6,7 +6,7 @@
 #    By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/23 14:05:59 by jgo               #+#    #+#              #
-#    Updated: 2023/07/15 10:19:36 by jgo              ###   ########.fr        #
+#    Updated: 2023/07/18 13:34:04 by jgo              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,4 +28,7 @@ all bonus :
 clean fclean re:
 	$(Q)$(foreach dir, $(DIRS), $(MAKE) -C $(dir) $@;)
 
-.PHONY: all clean fclean re bonus $(DIRS)
+vc:
+	docker build --tag=cpp-compile-check --file=Dockerfile .
+
+.PHONY: all clean fclean re bonus $(DIRS) vc
