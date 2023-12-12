@@ -38,3 +38,7 @@
 	path = cpp_module_08
 	url = https://github.com/devjgo/cpp_module_08
 	branch = main
+[submodule "cpp_module_09"]
+	path = cpp_module_09
+	url = https://github.com/devJgo/cpp_module_09.git
+	branch = main
