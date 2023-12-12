@@ -1,18 +1,18 @@
 [submodule "cpp_module_00"]
 	path = cpp_module_00
-	url = https://github.com/jgo-42/cpp_module_00
+	url = https://github.com/devjgo/cpp_module_00
 	branch = main
 [submodule "cpp_module_01"]
 	path = cpp_module_01
-	url = https://github.com/jgo-42/cpp_module_01
+	url = https://github.com/devjgo/cpp_module_01
 	branch = main
 [submodule "cpp_module_02"]
 	path = cpp_module_02
-	url = https://github.com/jgo-42/cpp_module_02
+	url = https://github.com/devjgo/cpp_module_02
 	branch = main
 [submodule "cpp_module_03"]
 	path = cpp_module_03
-	url = https://github.com/jgo-42/cpp_module_03
+	url = https://github.com/devjgo/cpp_module_03
 	branch = main
 [submodule "cpp_module_04"]
 	path = cpp_module_04
